@@ -10,4 +10,4 @@ hunter_add_package(wt)
 find_package(wt CONFIG REQUIRED)
 
 add_executable(wt_test main.cpp)
-target_link_libraries(wt_test wt::wt)
+target_link_libraries(wt_test WT::wt)

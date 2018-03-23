@@ -1,20 +1,20 @@
 #include <Wt/WApplication>
 
-class TestApp: public WApplication
+class TestApp: public Wt::WApplication
 {
 public:
-    TestApp(const WEnvironment& env);
+    TestApp(const Wt::WEnvironment& env);
 
 private:
 };
 
-TestApp::TestApp(const WEnvironment& env)
-    : WApplication(env)
+TestApp::TestApp(const Wt::WEnvironment& env)
+    : Wt::WApplication(env)
 {
     setTitle("TestApp");
 }
 
-WApplication *createApplication(const WEnvironment& env)
+Wt::WApplication *createApplication(const Wt::WEnvironment& env)
 {
     return new TestApp(env);
 }

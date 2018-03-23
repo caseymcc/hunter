@@ -45,9 +45,21 @@ hunter_add_version(
     250d236302cd7d3641a274e2656e37f56c56f5fd
 )
 
+hunter_add_version(
+    PACKAGE_NAME
+    MySQL-client
+    VERSION
+    "6.1.9-p1"
+    URL
+    "https://github.com/caseymcc/mysql-client/archive/v1.6.9-p1.tar.gz"
+#    "D:/projects/hunter/packages/mysql-client"
+    SHA1
+    f26373d8fc2a913bfcf2e06acbcb8fffdb1adc97
+)
+
 # https://github.com/ruslo/hunter/issues/705
 # hunter_cacheable(MySQL-client)
 
-hunter_pick_scheme(DEFAULT url_local_cmake)
-#hunter_pick_scheme(DEFAULT url_sha1_cmake)
+#hunter_pick_scheme(DEFAULT url_local_cmake)
+hunter_pick_scheme(DEFAULT url_sha1_cmake)
 hunter_download(PACKAGE_NAME MySQL-client)
