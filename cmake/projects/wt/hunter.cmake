@@ -14,8 +14,8 @@ hunter_add_version(
     VERSION
     "3.3.7-p0"
     URL
-    "https://github.com/caseymcc/wt/archive/3.3.7.tar.gz"
-#    "D:/projects/3rdparty/wt"
+#    "https://github.com/caseymcc/wt/archive/3.3.7.tar.gz"
+    "D:/projects/hunter/packages/wt"
     SHA1
     bf82dc0c9534e6eb4daf432fdfdbc2e82db83e05
 )
@@ -34,7 +34,7 @@ hunter_cmake_args(
 )
 
 # Pick a download scheme
-#hunter_pick_scheme(DEFAULT url_local_cmake)
-hunter_pick_scheme(DEFAULT url_sha1_cmake)
+hunter_pick_scheme(DEFAULT url_local_cmake)
+#hunter_pick_scheme(DEFAULT url_sha1_cmake)
 #hunter_cacheable(wt)
 hunter_download(PACKAGE_NAME wt)
