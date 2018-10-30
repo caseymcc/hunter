@@ -23,7 +23,7 @@ function(hunter_get_configuration_types)
   hunter_assert_not_empty_string("${x_PACKAGE}")
   hunter_assert_not_empty_string("${x_OUT}")
 
-  if(NOT HUNTER_PACKAGE_SCHEME_INSTALL)
+  if(NOT HUNTER_PACKAGE_SCHEME_INSTALL AND NOT HUNTER_PACKAGE_SCHEME_LOCAL_CMAKE)
     return()
   endif()
 
