@@ -110,11 +110,13 @@ matrix:
         TOOLCHAIN=clang-libstdcxx
         PROJECT_DIR=examples/MySQL-client
 
-    - os: osx
-      osx_image: xcode9.4
-      env: >
-        TOOLCHAIN=osx-10-11
-        PROJECT_DIR=examples/MySQL-client
+#    SDK no longer availible
+#    https://travis-ci.org/caseymcc/hunter/jobs/451907650
+#    - os: osx
+#      osx_image: xcode9.4
+#      env: >
+#        TOOLCHAIN=osx-10-11
+#        PROJECT_DIR=examples/MySQL-client
 
     - os: osx
       osx_image: xcode9.4
