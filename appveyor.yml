@@ -8,29 +8,54 @@ environment:
 
   matrix:
 
+    - TOOLCHAIN: "ninja-vs-12-2013-win64"
+      PROJECT_DIR: examples\MySQL-client
+      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2013
+
+    - TOOLCHAIN: "nmake-vs-12-2013-win64"
+      PROJECT_DIR: examples\MySQL-client
+      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2013
+
+    - TOOLCHAIN: "nmake-vs-12-2013"
+      PROJECT_DIR: examples\MySQL-client
+      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2013
+
+    - TOOLCHAIN: "vs-10-2010"
+      PROJECT_DIR: examples\MySQL-client
+      
+    - TOOLCHAIN: "vs-11-2012"
+      PROJECT_DIR: examples\MySQL-client
+      
+    - TOOLCHAIN: "vs-12-2013-win64"
+      PROJECT_DIR: examples\MySQL-client
+      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2013
+
     - TOOLCHAIN: "ninja-vs-15-2017-win64-cxx17"
-      PROJECT_DIR: examples\foo
+      PROJECT_DIR: examples\MySQL-client
       APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
 
     - TOOLCHAIN: "nmake-vs-15-2017-win64-cxx17"
-      PROJECT_DIR: examples\foo
+      PROJECT_DIR: examples\MySQL-client
       APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
 
-    - TOOLCHAIN: "vs-15-2017-win64-cxx17"
-      PROJECT_DIR: examples\foo
-      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
+#    https://ci.appveyor.com/project/caseymcc/hunter/builds/19950045/job/kf5bbug53mwuv52y
+#    - TOOLCHAIN: "vs-15-2017-win64-cxx17"
+#      PROJECT_DIR: examples\MySQL-client
+#      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
 
-    - TOOLCHAIN: "vs-14-2015-sdk-8-1"
-      PROJECT_DIR: examples\foo
+    - TOOLCHAIN: "vs-14-2015-win64"
+      PROJECT_DIR: examples\MySQL-client
       APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
 
-    - TOOLCHAIN: "mingw-cxx17"
-      PROJECT_DIR: examples\foo
-      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+#    https://ci.appveyor.com/project/caseymcc/hunter/builds/19954002/job/0yg76i0uubvut5i0
+#    - TOOLCHAIN: "mingw-cxx17"
+#      PROJECT_DIR: examples\MySQL-client
+#      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
 
-    - TOOLCHAIN: "msys-cxx17"
-      PROJECT_DIR: examples\foo
-      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
+#    https://ci.appveyor.com/project/caseymcc/hunter/builds/19954002/job/75i95vh2rwdtdn94
+#    - TOOLCHAIN: "msys-cxx17"
+#      PROJECT_DIR: examples\MySQL-client
+#      APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2015
 
 install:
   # Python 3
