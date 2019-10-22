@@ -13,20 +13,17 @@ PNG
 -  `Hunterized <https://github.com/hunter-packages/libpng>`__
 -  `Example <https://github.com/ruslo/hunter/blob/master/examples/PNG/CMakeLists.txt>`__
 
-.. code-block:: cmake
+.. literalinclude:: /../examples/PNG/CMakeLists.txt
+  :language: cmake
+  :start-after: # DOCUMENTATION_START {
+  :end-before: # DOCUMENTATION_END }
 
-    hunter_add_package(PNG)
-    find_package(PNG CONFIG REQUIRED)
+For compatibility with the
+`FindPNG <https://cmake.org/cmake/help/latest/module/FindPNG.html>`__
+module, the ``ALIAS`` target ``PNG::PNG`` can be used too (requires CMake
+version >= 3.11!):
 
-    target_link_libraries(... PRIVATE PNG::png)
-
-Compatibility mode:
-
-.. code-block:: cmake
-
-    hunter_add_package(PNG)
-    find_package(PNG REQUIRED)
-
-    include_directories(${PNG_INCLUDE_DIRS})
-    target_link_libraries(... ${PNG_LIBRARIES})
-    add_definitons(${PNG_DEFINITIONS})
+.. literalinclude:: /../examples/PNG/CMakeLists.txt
+  :language: cmake
+  :start-after: # DOCUMENTATION_START_1 {
+  :end-before: # DOCUMENTATION_END_1 }
